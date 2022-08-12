@@ -9,6 +9,7 @@
   --hero-footer-color: #2f303a;
   --light-bgc: #ffffff; /*цвет светлой секции*/
   --dark-bgc: #f5f4fa; /*цвет темной секции*/
+  --color1: #AFB1B8; /*цвет иконок*/
 }
 
 *,
@@ -245,6 +246,13 @@ body {
   gap: 30px;
 }
 
+.features-icon {
+  padding: 25px;
+  margin-bottom: 30px;
+  background-color: var(--dark-bgc);
+
+}
+
 .features-header {
   font-weight: 700;
   font-size: 14px;
@@ -327,7 +335,33 @@ body {
   font-size: 16px;
   line-height: 1.19;
 
-  margin-bottom: 0px;
+  margin-bottom: 16px;
+}
+
+
+.social-icon-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  
+}
+
+.social-icon-link {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-wh-color);
+  border-radius: 50%;
+}
+
+.social-icon-link:hover,
+.social-icon-link:focus {
+  background-color: var(--accent-color);
+  --color1: #ffffff;
+
 }
 
 .project-header {
@@ -337,6 +371,44 @@ body {
   letter-spacing: 0.06em;
   color: var(--title-color);
 }
+
+/* --------------постійні клієнти------------------ */
+
+.clients {
+  background-color: var(--light-bgc);
+  margin-bottom: 94px;
+}
+
+.clients-title {
+
+color: var(--title-color);
+padding-top: 94px;
+margin-bottom: 50px;
+
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.clients-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 94px;
+}
+
+.clients-item {
+  border: 1px solid var(--color1);
+  border-radius: 4px;
+
+  padding: 16px 32px;
+  
+
+}
+
+
 
 /* --------------Portpholio page------------------ */
 
