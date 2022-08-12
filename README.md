@@ -1,3 +1,3 @@
-# goit-markup-hw-03
+# goit-markup-hw-04
 
-Third homework from Go-IT school
+homework from Go-IT school
