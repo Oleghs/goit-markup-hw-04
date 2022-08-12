@@ -130,10 +130,15 @@ body {
 }
 
 .nav-links {
-  display: block;
+  
   display: flex;
   margin-left: auto;
   gap: 47px;
+}
+
+.nav-links-item {
+  display: flex;
+  gap: 10px;
 }
 
 .site-nav-link {
@@ -154,9 +159,10 @@ body {
   color: inherit;
 }
 
-.link:hover,
-.link:focus {
+.nav-links >li:hover,
+.nav-links >li:focus {
   color: var(--accent-color);
+  --color1: var(--accent-color);
 }
 
 .active {
