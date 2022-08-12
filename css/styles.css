@@ -395,8 +395,14 @@ margin-bottom: 50px;
 
 .clients-flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 30px;
+  fill: var(--main-color);
   margin-bottom: 94px;
+}
+
+.clients-flex >li:hover {
+  --color1: var(--accent-color);
 }
 
 .clients-item {
