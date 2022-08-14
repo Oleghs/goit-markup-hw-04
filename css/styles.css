@@ -9,7 +9,7 @@
   --hero-footer-color: #2f303a;
   --light-bgc: #ffffff; /*цвет светлой секции*/
   --dark-bgc: #f5f4fa; /*цвет темной секции*/
-  --color1: #AFB1B8; /*цвет иконок*/
+  --icon-color: #afb1b8; /*цвет иконок*/
 }
 
 *,
@@ -130,15 +130,16 @@ body {
 }
 
 .nav-links {
-  
   display: flex;
   margin-left: auto;
-  gap: 47px;
+  gap: 30px;
 }
 
-.nav-links-item {
+.nav-links-link {
   display: flex;
+  align-items: center;
   gap: 10px;
+  fill: var(--icon-color);
 }
 
 .site-nav-link {
@@ -159,10 +160,10 @@ body {
   color: inherit;
 }
 
-.nav-links >li:hover,
-.nav-links >li:focus {
+.nav-links-link:hover,
+.nav-links-link:focus {
   color: var(--accent-color);
-  --color1: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .active {
@@ -178,22 +179,18 @@ body {
   margin-left: auto;
   margin-right: auto;
 
-  /*background-color: var(--hero-footer-color);*/
+  margin-bottom: 94px;
 }
 
 .hero-image {
-  
   background-image: linear-gradient(rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.4)),
-  url(../images/hero-image.jpg);
-  
+    url(../images/hero-image.jpg);
+
   background-repeat: no-repeat, no-repeat;
   background-position: 50% 50%;
-  
 
   max-width: 1600px;
-
 }
-
 
 .hero-title {
   display: block;
@@ -241,22 +238,22 @@ body {
 /* --------------Features преимущества------------------ */
 
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
-
+  margin-bottom: 94px;
   background-color: var(--light-bgc);
 }
 
-.feature-flex {
+.feature-list {
   display: flex;
   gap: 30px;
 }
 
 .features-icon {
-  padding: 25px;
+  padding: 25px 100px;
   margin-bottom: 30px;
   background-color: var(--dark-bgc);
 
+  width: 270px;
+  height: 120px;
 }
 
 .features-header {
@@ -344,15 +341,19 @@ body {
   margin-bottom: 16px;
 }
 
-
 .social-icon-list {
   display: flex;
   justify-content: center;
   gap: 10px;
-  
+}
+
+.social-icon-list-items {
+  display: flex;
+  justify-content: center;
 }
 
 .social-icon-link {
+  display: block;
   width: 44px;
   height: 44px;
 
@@ -361,13 +362,18 @@ body {
   justify-content: center;
   background-color: var(--button-wh-color);
   border-radius: 50%;
+
+  color: var(--icon-color);
+}
+
+.social-icon {
+  fill: currentColor;
 }
 
 .social-icon-link:hover,
 .social-icon-link:focus {
   background-color: var(--accent-color);
-  --color1: #ffffff;
-
+  color: #ffffff;
 }
 
 .project-header {
@@ -386,11 +392,9 @@ body {
 }
 
 .clients-title {
-
-color: var(--title-color);
-padding-top: 94px;
-margin-bottom: 50px;
-
+  color: var(--title-color);
+  padding-top: 94px;
+  margin-bottom: 50px;
 
   font-weight: 700;
   font-size: 36px;
@@ -399,31 +403,34 @@ margin-bottom: 50px;
   letter-spacing: 0.03em;
 }
 
-.clients-flex {
+.clients-list {
   display: flex;
   justify-content: center;
   gap: 30px;
-  fill: var(--main-color);
-  margin-bottom: 94px;
 }
 
-.clients-flex >li:hover {
-  --color1: var(--accent-color);
-}
+.clients-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--icon-color);
 
-
-.clients-item {
-  border: 1px solid var(--color1);
+  border: 1px solid var(--icon-color);
   border-radius: 4px;
 
-  padding: 16px 32px;
   width: 170px;
   height: 92px;
-  
-
 }
 
+.clients-icon {
+  fill: currentColor;
+}
 
+.clients-item-link:hover,
+.clients-item-link:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
 
 /* --------------Portpholio page------------------ */
 
@@ -470,7 +477,7 @@ margin-bottom: 50px;
   border-radius: 4px;
 }
 
-.portpholio-butt-flex {
+.portpholio-butt-items {
   /*buttons flex*/
   display: flex;
   gap: 8px;
@@ -479,19 +486,17 @@ margin-bottom: 50px;
   margin-bottom: 50px;
 }
 
-.portpholio-flex {
+.portpholio-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.portpholio-flex > li:hover,
-.portpholio-flex > li:focus  {
+.portpholio-list > li:hover,
+.portpholio-list > li:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
-
 
 .portpholio-card-name {
   border: 1px solid #eeeeee;
@@ -502,9 +507,36 @@ margin-bottom: 50px;
 
 .footer {
   background-color: var(--hero-footer-color);
+}
 
-  padding-top: 60px;
-  padding-bottom: 60px;
+.footer-list {
+  display: flex;
+  gap: 70px;
+  padding-top: 63px;
+}
+
+.footer-left-side {
+  margin-bottom: 57px;
+}
+
+.footer-rigth-side {
+}
+
+.footer-rigth-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--title-hero-color);
+
+  padding-top: 8px;
+  margin-bottom: 20px;
+}
+
+.footer-socials {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .logo-footer {
@@ -525,4 +557,14 @@ margin-bottom: 50px;
 .foot-adress {
   line-height: calc(24 / 14);
   color: #fff;
+}
+
+.footer-link {
+  line-height: calc(24 / 14);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-color);
 }
