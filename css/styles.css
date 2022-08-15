@@ -251,16 +251,26 @@ body {
 
 .feature-list {
   display: flex;
+  justify-content: center;
   gap: 30px;
 }
 
-.features-icon {
-  padding: 25px 100px;
+.feature-list-conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   margin-bottom: 30px;
   background-color: var(--dark-bgc);
 
   width: 270px;
   height: 120px;
+}
+
+.features-icon {
+  width: 70px;
+  height: 70px;
+  fill: inherit;
 }
 
 .features-header {
